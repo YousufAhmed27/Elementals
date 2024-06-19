@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="con load">
+        <div class="cir"></div>
+        <div class="cir"></div>
+        <div class="cir"></div>
+        <div class="cir"></div>
+        <div class="cir"></div>
+    </div>
+    <div class="con choose hideit">
+        <div class="text">
+            Choose Your Warrior
+        </div>
+        <div class="card" data-char="StoneGolem">
+            <img src="./Character/StoneGolem/StoneGolemCard.webp" alt="card" id="StoneGolemCard">
+        </div>
+        <div class="card disabled" data-char="WindHashashin">
+            <img src="./Character/WindHashashin/wind_hashashin.png" alt="card" id="WindHashashinCard">
+        </div>
+        <div class="card disabled" data-char="CrystalMauler">
+            <img src="./Character/CrystalMauler/crystal_mauler.png" alt="card" id="CrystalMaulerCard">
+        </div>
+        <div class="card disabled" data-char="GroundMonk">
+            <img src="./Character/GroundMonk/ground_monk.png" alt="card" id="GroundMonkCard">
+        </div>
+        <div class="card disabled" data-char="FireKnight">
+            <img src="./Character/FireKnight/fire_knight.png" alt="card" id="FireKnightCard">
+        </div>
+        <div class="card disabled" data-char="WaterPriestess">
+            <img src="./Character/WaterPriestess/water_priestess.png" alt="card" id="WaterPriestessCard">
+        </div>
+        <div class="card disabled" data-char="LeafRanger">
+            <img src="./Character/LeafRanger/leaf_ranger.png" alt="card" id="LeafRangerCard">
+        </div>
+        <div class="card disabled" data-char="FrostGuardian">
+            <img src="./Character/FrostGuardian/Frost_guard.jpg" alt="card" id="FrostGuardianCard">
+        </div>
+    </div>
+    <canvas id="can"></canvas>
+    <button class="movement hideit">Movement</button>
+    <div class="overview hideit">
+        <div class="move">
+            <div class="title">Player</div>
+            <div class="rulesmove">
+                <div class="in mainmove">
+                    <div class="rule">
+                        <div class="key">→</div>
+                        <span>Moves Right</span>
+                    </div>
+                    <div class="rule">
+                        <div class="key">←</div>
+                        <span>Moves Left</span>
+                    </div>
+                    <div class="rule">
+                        <div class="key">↑</div>
+                        <span>Jump</span>
+                    </div>
+                    <div class="rule">
+                        <div class="key">↓</div>
+                        <span>Defense</span>
+                    </div>
+                </div>
+                <div class="in addi">
+                    <div class="rule">
+                        <span class="super">Super</span>
+                    </div>
+                </div>
+            </div>
+            <button class="close">Close</button>
+        </div>
+    </div>
+
+
+    <div class="hideit">
+        <img src="./Character/StoneGolem/Character_sheet.png" alt="Character" id="StoneGolemSheet">
+        <img src="./Character/StoneGolem/arm_projectile.png" alt="asset" id="ArmProject">
+        <img src="./Character/StoneGolem/glow_arm.png" alt="asset" id="ArmGlow">
+        <img src="./Character/StoneGolem/Laser_sheet.png" alt="asset" id="LaserSheet">
+
+        <img src="./Boss/StoneGolem/Character_sheet.png" alt="Character" id="StoneGolemBossSheet">
+        <img src="./Boss/StoneGolem/arm_projectile.png" alt="asset" id="ArmProjectBoss">
+        <img src="./Boss/StoneGolem/glow_arm.png" alt="asset" id="ArmGlowBoss">
+        <img src="./Boss/StoneGolem/Laser_sheet.png" alt="asset" id="LaserSheetBoss">
+
+        <img src="./Character/CrystalMauler/crystal_mauler_109x128.png" alt="Character" id="CrystalMaulerSheet">
+        <img src="./Character/CrystalMauler/Crystal.png" al="asset" id="Crystals">
+
+        <img src="./Boss/CrystalMauler/crystal_mauler_109x128.png" alt="Character" id="CrystalMaulerSheetBoss">
+        <img src="./Boss/CrystalMauler/Crystal.png" al="asset" id="CrystalsBoss">
+
+        <img src="./Character/LeafRanger/leaf_ranger_288x128.png" alt="character" id="LeafRangerSheet">
+        <img src="./Character/LeafRanger/projectiles_and_effects_256x128.png" alt="asset" id="LeafProject">
+
+        <img src="./Boss/LeafRanger/leaf_ranger_288x128.png" alt="character" id="LeafRangerSheetBoss">
+        <img src="./Boss/LeafRanger/projectiles_and_effects_256x128.png" alt="asset" id="LeafProjectBoss">
+
+        <img src="./Character/FireKnight/fireSheet288x128.png" alt="character" id="FireKnightSheet">
+
+        <img src="./Boss/FireKnight/fireSheet288x128.png" alt="character" id="FireKnightSheetBoss">
+        <img src="./Boss/FireKnight/fire.png" alt="asset" id="FireImg">
+
+        <img src="./Character/GroundMonk/ground_monk_288x128.png" alt="character" id="GroundMonkSheet">
+        <img src="./Character/GroundMonk/smasher.png" alt="asset" id="Smach">
+
+        <img src="./Boss/GroundMonk/ground_monk_288x128.png" alt="character" id="GroundMonkSheetBoss">
+        <img src="./Boss/GroundMonk/smasher.png" alt="asset" id="SmachBoss">
+
+        <img src="./Character/WaterPriestess/water_288x128.png" alt="character" id="WaterPriestessSheet">
+        <img src="./Character/WaterPriestess/WaterAttack.png" alt="asset" id="WaterAttack">
+
+        <img src="./Boss/waterPriestess/water_288x128.png" alt="character" id="WaterPriestessSheetBoss">
+        <img src="./Boss/waterPriestess/WaterAttack.png" alt="asset" id="WaterAttackBoss">
+
+        <img src="./Character/WindHashashin/wind_288x128.png" alt="character" id="WindHashashinSheet">
+
+        <img src="./Boss/WindHashashin/wind_288x128.png" alt="character" id="WindHashashinBossSheet">
+
+        <img src="./Character/FrostGuardian/frost_guard_192_128.png" alt="character" id="FrostGuardianSheet">
+
+        <img src="./Background/Flat.jpg" alt="Background" id="Desert">
+        <img src="./Background/Marz.jpg" alt="Background" id="Marz">
+        <img src="./Background/layer-5.png" alt="Background" id="Field">
+        <img src="./Background/background 2d.png" alt="Background" id="FieldIce">
+        <img src="./Background/ice rocks.png" alt="Background" id="IceRock">
+    </div>
+    <script src="main.js" type="module"></script>
+    <scritp src="Player.js" type="module"></scritp>
+    <script src="input.js" type="module"></script>
+    <script src="effects.js" type="module"></script>
+    <script src="boss.js" type="module"></script>
+    <script src="level.js" type="module"></script>
+</body>
+
+</html>
